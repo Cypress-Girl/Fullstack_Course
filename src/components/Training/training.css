@@ -1,0 +1,68 @@
+.main-container {
+  width: 100%;
+  height: auto;
+}
+.main-container .wrap-main {
+  width: 100%;
+  height: auto;
+  padding-top: 60px;
+  padding-left: 144px;
+  padding-bottom: 250px;
+}
+.main-container .wrap-main #skills-container {
+  width: 952px;
+  height: 104px;
+  box-sizing: border-box;
+  padding-left: 48px;
+  padding-top: 27px;
+  margin-bottom: 42px;
+  background-color: rgba(100, 149, 237, 0.2);
+}
+.main-container .wrap-main #skills-container #necessary {
+  color: #8D9099;
+  font-family: Montserrat-SemiBold;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: left;
+}
+.main-container .wrap-main #skills-container #practice {
+  color: #202124;
+  font-family: Montserrat-Medium;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+}
+.main-container .wrap-main #title {
+  margin-bottom: 18px;
+  color: #202124;
+  font-family: Montserrat-Bold;
+  font-size: 40px;
+  letter-spacing: -0.3px;
+  line-height: 48px;
+  text-align: left;
+}
+.main-container .wrap-main #count {
+  margin-bottom: 36px;
+  color: #202124;
+  font-family: Montserrat-Medium;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+}
+.main-container .wrap-main input {
+  width: 148px;
+  height: 47px;
+  border: none;
+  color: #202124;
+  font-family: Montserrat-Medium;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+.main-container .wrap-main input.selected {
+  border-bottom: 2px solid #0A54FF;
+  color: #0A54FF;
+}
+
+/*# sourceMappingURL=training.css.map */
