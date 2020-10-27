@@ -14,8 +14,8 @@ const Header = () => {
                     <a href="/">О нас</a>
                 </div>
                 <div id="button-container">
-                    <input type="text" value="Регистрация"/>
-                    <input type="text" value="Войти"/>
+                    <input type="text" value="Регистрация" readOnly/>
+                    <input type="text" value="Войти" readOnly/>
                 </div>
             </div>
         </header>

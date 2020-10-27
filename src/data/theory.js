@@ -1,5 +1,6 @@
 export const theory = {
-    html: {
+    "html css" : {
+        image: "/images/html.jpg",
         title: "HTML/CSS",
         skills: "Не требуются",
         tests: 25,
@@ -65,12 +66,13 @@ export const theory = {
         ]
     },
 
-    javascript: {
-        title: "Java Script",
+    "Java Script": {
+        image: "/images/js.jpg",
+        title: "JavaScript",
         skills: "Не требуются",
-        tests: 25,
-        video: 40,
-        tasks: 62,
+        tests: 30,
+        video: 35,
+        tasks: 50,
         chapters: [
             {
                 title: "Фундаментальный Javascript",
@@ -118,12 +120,13 @@ export const theory = {
         ]
     },
 
-    react: {
-        title: "React JS",
+    "React JS": {
+        image: "/images/react-js.jpg",
+        title: "ReactJS",
         skills: "Не требуются",
-        tests: 25,
-        video: 40,
-        tasks: 62,
+        tests: 31,
+        video: 36,
+        tasks: 55,
         chapters: [
             {
                 title: "Введение в React JS",

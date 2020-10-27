@@ -1,0 +1,25 @@
+.themes-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: -52px;
+  background-color: #DADCE0;
+  padding: 0 52px;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+.themes-container p {
+  width: 100%;
+  margin: 10px 0;
+  color: #202124;
+  font-family: Montserrat-Medium;
+  font-size: 16px;
+  letter-spacing: -0.15px;
+  line-height: 24px;
+  text-align: left;
+  white-space: pre;
+}
+
+/*# sourceMappingURL=themes.css.map */

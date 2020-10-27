@@ -1,0 +1,42 @@
+@import "../../data/general";
+
+.chapters-container {
+  width: 100%;
+  height: auto;
+  padding: 0 52px;
+  box-sizing: border-box;
+  background-color: $color-light-gray2;
+  overflow: hidden;
+  transition-property: height;
+  transition-duration: 500ms;
+  cursor: pointer;
+
+  #chapters-wrap{
+    width: 100%;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      width: 100%;
+      color: $color-black;
+      font-family: Montserrat-Medium;
+      font-size: 21px;
+      letter-spacing: -0.15px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    img {
+
+    }
+  }
+
+  #chapters-wrap:not(:last-child){
+    box-shadow: 0 1px 1px 0 $color-light-gray;
+  }
+
+
+}

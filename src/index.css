@@ -87,6 +87,7 @@ header #right-header #button-container input {
   text-align: center;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 header #right-header #button-container input:last-child {
   width: 120px;
