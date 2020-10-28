@@ -17,74 +17,110 @@
       padding-bottom: 66px;
     }
 
-    .profession-box {
-      width: 368px;
-      height: 384px;
-      position: relative;
-      border-radius: 6px;
-      border: 1px solid $color-light-gray;
-      overflow: hidden;
+    #profession-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
 
-      img {
-        width: 100%;
-        height: auto;
+      .profession-box {
+        width: 368px;
+        height: 384px;
         position: relative;
-        top: 50px;
-        left: 50px;
-
-      }
-
-      .course-about {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        z-index: 10;
-        min-height: 150px;
-        padding: 20px 0 0 20px;
-        box-sizing: border-box;
+        border-radius: 6px;
         border: 1px solid $color-light-gray;
-        border-radius: 6px 6px 0 0;
-        background-color: white;
-        box-shadow: 0 3px 30px rgba(0, 0, 0, 0.5);
-        cursor: pointer;
+        overflow: hidden;
+        margin-right: 20px;
+        margin-bottom: 20px;
 
-        .course-proff {
-          color: $color-gray3;
-          font-family: Montserrat-Medium;
-          font-size: 15px;
-          line-height: 24px;
-          text-align: left;
+        img {
+          width: 100%;
+          height: auto;
+          position: relative;
+          top: 50px;
+          left: 50px;
+
         }
 
-        .course-name {
-          color: $color-black;
-          font-family: Montserrat-Bold;
-          font-size: 30px;
-          letter-spacing: -0.3px;
-          line-height: 32px;
-          text-align: left;
-          padding: 10px 0;
-        }
+        .course-about {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+          z-index: 10;
+          padding: 20px 0 0 20px;
+          box-sizing: border-box;
+          border: 1px solid $color-light-gray;
+          border-radius: 6px 6px 0 0;
+          background-color: white;
+          box-shadow: 0 3px 30px rgba(0, 0, 0, 0.5);
+                      //-3px 0 30px rgba(0, 0, 0, 0.5),
+                      //3px 0 30px rgba(0, 0, 0, 0.5);
+          cursor: pointer;
 
-        .technologies:hover {
-          display: block;
-        }
+          .course-proff {
+            color: $color-gray3;
+            font-family: Montserrat-Medium;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: left;
+          }
 
-        .course-counters,
-        .technologies {
-          color: $color-black;
-          font-family: Montserrat-Medium;
-          font-size: 15px;
-          line-height: 24px;
-          text-align: left;
-          white-space: pre;
+          .course-name {
+            color: $color-black;
+            font-family: Montserrat-Bold;
+            font-size: 30px;
+            letter-spacing: -0.3px;
+            line-height: 32px;
+            text-align: left;
+            padding: 10px 0 30px;
+          }
+
+          .course-counters {
+            color: $color-black;
+            font-family: Montserrat-Medium;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: left;
+            white-space: pre;
+            padding: 10px 0 30px;
+          }
+
+          .technologies {
+            height: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: center;
+            overflow: hidden;
+            transition-property: height;
+            transition-duration: 600ms;
+            color: $color-black;
+            font-family: Montserrat-Medium;
+            font-size: 15px;
+            line-height: 24px;
+            text-align: left;
+          }
+
+          .technologies.view {
+            height: 70px;
+          }
         }
       }
-
     }
+  }
+}
 
+@media screen and (max-width: 812px) {
+  .other-container #other-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
   }
 
+  .other-container #other-wrap #profession-container {
+    justify-content: center;
+  }
 }

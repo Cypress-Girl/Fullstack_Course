@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: 'Montserrat-SemiBold';
-  src:  url('data/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+  src: url('data/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
   url('data/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
@@ -38,6 +38,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
 header {
   width: 100%;
   height: 72px;
@@ -64,6 +65,7 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
 
     p {
       color: #202124;
@@ -74,7 +76,8 @@ header {
       margin-right: 97px;
     }
 
-    #links-container {
+    .links-container {
+      display: flex;
 
       a {
         text-decoration: none;
@@ -95,7 +98,7 @@ header {
         width: 135px;
         height: 40px;
         margin-left: 12px;
-        background-color: $color-light-blue ;
+        background-color: $color-light-blue;
         color: $color-blue;
         font-family: Montserrat-Medium;
         font-size: 14px;
@@ -111,7 +114,150 @@ header {
         height: 40px;
       }
     }
+  }
+
+  #right-header-2 {
+    display: none;
+    position: relative;
+
+    #right-header-burger {
+      .line {
+        width: 25px;
+        height: 4px;
+        background-color: $color-black;
+        margin-top: 5px;
+      }
+    }
+
+    #burger-sidebar {
+      width: 170px;
+      height: auto;
+      position: absolute;
+      right: -210px;
+      top: 49px;
+      border: 1px solid $color-light-gray;
+      box-shadow: -2px 2px 8px 0 $color-light-gray;
+      background-color: white;
+
+      transition-property: right;
+      transition-duration: 500ms;
+
+      .links-container {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          display: block;
+          padding: 10px 0;
+          text-decoration: none;
+          color: #3C4043;
+          font-family: Montserrat-Medium;
+          font-size: 15px;
+          line-height: 24px;
+          text-align: right;
+          padding-right: 35px;
+        }
+
+        a:hover {
+          color: $color-blue;
+        }
+
+      }
+    }
+
+    #burger-sidebar.show {
+      right: -30px;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  min-height: 240px;
+  background-color: $color-blue-gray;
+
+  #footer-wrap {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 0 144px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
 
+    .link-group-container {
+      width: max-content;
+      margin-right: 20px;
+
+      .link-title {
+        width: 100%;
+        color: $color-gray3;
+        font-family: Montserrat-Medium;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: left;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $color-gray3;
+      }
+
+      .links-container {
+        display: flex;
+        flex-direction: column;
+        padding-right: 40px;
+        box-sizing: border-box;
+        padding-bottom: 30px;
+
+        .one-link {
+          color: #FFFFFF;
+          font-family: Montserrat-Medium;
+          font-size: 15px;
+          line-height: 24px;
+          text-align: left;
+          padding-top: 8px;
+          text-decoration: none;
+        }
+      }
+
+      .links-container.subscription{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 374px;
+
+        .one-link {
+          padding-right: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  header {
+    padding: 0 30px;
+  }
+
+  header #right-header {
+    display: none;
+  }
+
+  header #right-header-2 {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 812px){
+  footer #footer-wrap {
+    flex-direction: column;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  footer #footer-wrap .link-group-container .links-container.subscription{
+    flex-direction: column;
   }
 }

@@ -5,16 +5,14 @@
   height: auto;
 
   .wrap-main {
-    width: 952px;
+    max-width: 952px;
     height: auto;
     box-sizing: border-box;
-    padding-top: 60px;
-    padding-left: 144px;
-    padding-bottom: 250px;
+    padding: 60px 30px 250px 144px;
 
     #skills-container {
       width: 100%;
-      height: 104px;
+      min-height: 104px;
       box-sizing: border-box;
       padding-left: 48px;
       padding-top: 27px;
@@ -75,3 +73,11 @@
       }
   }
 }
+
+@media screen and (max-width: 812px) {
+    .main-container .wrap-main {
+    padding: 30px 30px 70px;
+    margin: 0 auto;
+  }
+}
+

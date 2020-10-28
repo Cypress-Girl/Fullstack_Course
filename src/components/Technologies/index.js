@@ -40,9 +40,13 @@ class Section extends React.Component {
                         <img src={this.info.image} alt="tech"/>
                     </div>
                     <div className="section-about-container">
-                        <p id="section-title">{this.title}</p>
-                        <p id="section-skills"><span>Необходимые навыки: </span>{this.info.skills}</p>
-                        <p id="section-info">{`Тестов:  ${this.info.tests}    Видео:  ${this.info.video}     Практических заданий:  ${this.info.tasks}`}</p>
+                        <p className="section-title">{this.title}</p>
+                        <span className="section-skills"><span>Необходимые навыки: </span>{this.info.skills}</span>
+                        <div className="section-info-container">
+                            <span className="section-info">Тестов:  {this.info.tests}</span>
+                            <span className="section-info">Видео:  {this.info.video}</span>
+                            <span className="section-info">Практических заданий:  {this.info.tasks}</span>
+                        </div>
                     </div>
                     <img className="button-open-close"
                          src={this.state.view ? "/images/button_close.png" : "/images/button_add.png"} alt=""/>

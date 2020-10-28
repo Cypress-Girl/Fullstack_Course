@@ -26,7 +26,7 @@
 .one-section .section-about-container p {
   padding-top: 6px;
 }
-.one-section .section-about-container #section-title {
+.one-section .section-about-container .section-title {
   color: #202124;
   font-family: Montserrat-Bold;
   font-size: 30px;
@@ -34,27 +34,37 @@
   line-height: 32px;
   text-align: left;
 }
-.one-section .section-about-container #section-skills {
+.one-section .section-about-container .section-skills {
   color: #202124;
   font-family: Montserrat-Medium;
   font-size: 15px;
   line-height: 24px;
   text-align: left;
 }
-.one-section .section-about-container #section-skills span {
+.one-section .section-about-container .section-skills span {
   color: #8D9099;
   font-family: Montserrat-Medium;
   font-size: 15px;
   line-height: 24px;
   text-align: left;
 }
-.one-section .section-about-container #section-info {
+.one-section .section-about-container .section-info-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.one-section .section-about-container .section-info-container .section-info {
   color: #202124;
   font-family: Montserrat-Medium;
   font-size: 15px;
   line-height: 24px;
   text-align: left;
   white-space: pre;
+  padding-right: 20px;
+}
+@media screen and (max-width: 599px) {
+  .one-section #section-img-container {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=viewcontent.css.map */

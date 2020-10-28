@@ -2,7 +2,7 @@ import React from 'react';
 import {theory} from "../../data/theory";
 import "./viewcontent.css";
 import {projects} from "../../data/projects";
-import Section from "../Section";
+import Section from "../Technologies";
 
 function Theory() {
     return (

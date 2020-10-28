@@ -14,7 +14,6 @@ class Themes extends React.Component {
     }
 
     render() {
-        console.log("Themes render()")
         let view;
         if (this.h === -1)   //первый рендер: в стилях height принудительно не ставим
             view = {display: "block"};

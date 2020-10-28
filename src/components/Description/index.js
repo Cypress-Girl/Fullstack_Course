@@ -5,7 +5,7 @@ const Description = () => {
     return (
         <div className="description-container">
             <div className="wrap">
-                <p id="back-to-home"><span>&#8592;</span>Главная</p>
+                <a href="/" id="back-to-home"><span>&#8592;</span>Главная</a>
                 <p id="profession">ПРОФЕССИЯ</p>
                 <p id="title">Full Stack web-разработчик</p>
                 <p className="description">Научитесь проектировать и разрабатывать современные веб-приложения, которые являются основой для приложений, веб-сайтов и продуктов, которые люди и компании используют каждый день.</p>
