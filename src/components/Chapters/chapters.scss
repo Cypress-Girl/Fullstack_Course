@@ -3,6 +3,7 @@
 .chapters-container {
   width: 100%;
   height: auto;
+  max-height: max-content;
   padding: 0 52px;
   box-sizing: border-box;
   background-color: $color-light-gray2;

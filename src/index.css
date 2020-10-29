@@ -32,11 +32,13 @@ p {
 header {
   width: 100%;
   height: 72px;
+  box-shadow: 0 2px 2px 0 #E6E6E6;
   padding: 0 16px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
 header .logo {
   display: inline-block;
@@ -108,37 +110,35 @@ header #right-header-2 #right-header-burger .line {
   margin-top: 5px;
 }
 header #right-header-2 #burger-sidebar {
-  width: 170px;
+  right: -30px;
+  width: 0px;
   height: auto;
   position: absolute;
-  right: -210px;
   top: 49px;
+  z-index: 100;
   border: 1px solid #DADCE0;
   box-shadow: -2px 2px 8px 0 #DADCE0;
   background-color: white;
-  transition-property: right;
+  overflow: hidden;
+  white-space: nowrap;
+  transition-property: width;
   transition-duration: 500ms;
-}
-header #right-header-2 #burger-sidebar .links-container {
-  display: flex;
-  flex-direction: column;
 }
 header #right-header-2 #burger-sidebar .links-container a {
   display: block;
-  padding: 10px 0;
+  padding: 10px 35px;
   text-decoration: none;
   color: #3C4043;
   font-family: Montserrat-Medium;
   font-size: 15px;
   line-height: 24px;
   text-align: right;
-  padding-right: 35px;
 }
 header #right-header-2 #burger-sidebar .links-container a:hover {
   color: #0A54FF;
 }
 header #right-header-2 #burger-sidebar.show {
-  right: -30px;
+  width: 180px;
 }
 
 footer {
@@ -150,6 +150,7 @@ footer #footer-wrap {
   width: 100%;
   height: 100%;
   padding: 20px 0 0 144px;
+  box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

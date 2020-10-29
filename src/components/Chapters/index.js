@@ -35,6 +35,7 @@ class OneChapter extends React.Component {
                             view={this.state.view}
                             course={this.props.chapter.title}
                             id={this.props.chapter.title}
+                            resize={this.props.resize}
                     />
                     : null}
             </React.Fragment>
@@ -49,24 +50,66 @@ class Chapters extends React.Component {
     }
 
     componentDidMount() {
-        //запоминаем реальную высоту контейнера для анимации плавного раскрытия
+        this.rememberHeight();
+        this.setHeightAuto();
+    }
+
+    rememberHeight() {
         let container = document.getElementById(this.props.course);
-        this.h = container.clientHeight;
+
+        let child = container.firstElementChild;
+        this.h = 0;
+        while (child){
+            if (child.id === "chapters-wrap"){
+                this.h += child.clientHeight;
+            } else if (child.classList.contains("show")) {
+                this.h += child.clientHeight;
+            }
+            child = child.nextElementSibling;
+        }
+        //сменим height="auto" на реальный размер контейнера для плавной анимации закрытия
+        container.style.height = this.h + "px";
+    }
+
+    closeAllChildren() {
+        let container = document.getElementById(this.props.course);
+
+        let child = container.firstElementChild;
+        while (child){
+            if (child.classList.contains("show")) {
+                child.classList.remove("show");
+                child.style.height = "0px";
+            }
+            child = child.nextElementSibling;
+        }
+    }
+
+    setHeightAuto() {
+        console.log("set auto")
+        //установим height="auto" для автоматичекого изменения размера контейнера
+        //при изменении размера содержимого
+        let container = document.getElementById(this.props.course);
+        container.style.height = "auto";
     }
 
     render() {
-
-        let view;
+        let viewStyle;
         if (this.h === -1)   //первый рендер: в стилях height принудительно не ставим
-            view = {display: "block"};
+            viewStyle = {display: "block"};
         else        //последующие отрисовки: меняем height с 0 на реальную высоту (и обратно)
-            view = this.props.view ? {height: this.h} : {height: 0};
+        {
+            viewStyle = this.props.view ? {height: this.h} : {height: 0};
+            if (!this.props.view){
+                this.closeAllChildren();
+                this.rememberHeight();
+            }
+        }
 
         return (
             <React.Fragment>
-                <div className="chapters-container" id={this.props.course} style={view}>
+                <div className="chapters-container" id={this.props.course} style={viewStyle}>
                     {this.props.list.map((item, index) => (
-                        <OneChapter chapter={item} id={index} key={index}/>
+                        <OneChapter chapter={item} id={index} key={index} resize={() => this.setHeightAuto()}/>
                     ))}
                 </div>
 

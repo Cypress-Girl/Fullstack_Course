@@ -4,11 +4,15 @@ class Header extends React.Component {
 
     clickMenuBurger = () => {
         let side = document.getElementById("burger-sidebar");
-        if (side.classList.contains("show"))
+        if (side.classList.contains("show")) {
             side.classList.remove("show");
-        else
+        } else {
             side.classList.add("show");
-
+            let main = document.getElementsByClassName("main-container")[0];
+            if (main) {
+                side.style.height = main.clientHeight - 1 + "px";
+            }
+        }
     }
 
     render() {
@@ -35,12 +39,17 @@ class Header extends React.Component {
                         <div className="line"></div>
                         <div className="line"></div>
                     </div>
-                    <div id="burger-sidebar">
+                    <div id="burger-sidebar"  onClick={this.clickMenuBurger}>
                         <div className="links-container">
                             <a href="/">Все курсы</a>
                             <a href="/">Подписка</a>
                             <a href="/">О нас</a>
-                            <div style={{borderBottom: "1px solid"}}></div>
+                            <div style={{
+                                borderBottom: "1px solid lightgray",
+                                boxShadow: "0px 2px 4px 0px lightgray",
+                                width: "80%",
+                                margin: "20px auto"
+                            }}/>
                             <a href="/">Регистрация</a>
                             <a href="/">Войти</a>
 
