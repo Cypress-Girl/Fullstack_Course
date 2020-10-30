@@ -9,6 +9,7 @@
   transition-property: height;
   transition-duration: 500ms;
   cursor: pointer;
+  z-index: -10;
 }
 .chapters-container #chapters-wrap {
   width: 100%;
@@ -26,6 +27,12 @@
   letter-spacing: -0.15px;
   line-height: 24px;
   text-align: left;
+}
+.chapters-container #chapters-wrap img {
+  transition-duration: 300ms;
+}
+.chapters-container #chapters-wrap img.open {
+  transform: rotate(-180deg);
 }
 .chapters-container #chapters-wrap:not(:last-child) {
   box-shadow: 0 1px 1px 0 #DADCE0;

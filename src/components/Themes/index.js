@@ -8,15 +8,12 @@ class Themes extends React.Component {
     }
 
     componentDidMount() {
-        console.log("mount")
         //запоминаем реальную высоту контейнера для анимации плавного раскрытия
         let container = document.getElementById(this.props.id);
-        console.log(container.clientHeight)
         this.h = container.clientHeight;
     }
 
     render() {
-        console.log('render')
         let viewStyle;
         let show="";
 
@@ -24,7 +21,6 @@ class Themes extends React.Component {
             viewStyle = {display: "block"};
         else        //последующие отрисовки: меняем height с 0 на реальную высоту (и обратно)
         {
-            console.log("view = true")
             viewStyle = this.props.view ? {height: this.h} : {height: "0px"};
             show = this.props.view ? "show" : "";
             if  (this.props.view) this.props.resize();

@@ -12,10 +12,17 @@
   #section-img-container {
     width: 227px;
     height: auto;
+    overflow: hidden;
+    background-color: $color-light-gray;
+    clip-path: circle(37.5% at 45.5% 53%);
 
     img {
       width: 100%;
       height: auto;
+      position: relative;
+      top: -10px;
+      left: -25px;
+      clip-path: circle(37% at 60% 60%);
     }
   }
 
@@ -72,7 +79,15 @@
       }
     }
 
-    .button-open-close {
+  }
+
+  .button-open-close {
+    width: 28px;
+    height: 28px;
+
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }

@@ -53,6 +53,7 @@
         margin-bottom: 40px;
         transition-property: top, background-color;
         transition-duration: 600ms, 300ms;
+        cursor: pointer;
 
         #tariff-name {
           color: $color-lime;
@@ -64,8 +65,7 @@
 
         #tariff-price {
           color: $color-lime;
-          //font-family: JetBrainsMono;
-          font-family: Montserrat-Bold;
+          font-family: JetBrainsMono-Bold;
           font-size: 56px;
           letter-spacing: -2.62px;
           line-height: 48px;
@@ -97,7 +97,7 @@
 }
 
 @media screen and (max-width: 812px) {
-    .price-container #price-wrap {
+  .price-container #price-wrap {
     padding-left: 30px;
     padding-right: 30px;
     margin: 0 auto;
@@ -105,6 +105,12 @@
 
   .price-container #price-wrap #tariff-container {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .price-container #price-wrap .price-about {
+    padding-bottom: 30px;
   }
 }
 

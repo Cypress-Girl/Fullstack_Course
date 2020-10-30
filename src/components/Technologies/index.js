@@ -24,6 +24,10 @@ class Section extends React.Component {
         }))
     }
 
+    rotateOpenIcon() {
+
+    }
+
     render() {
         this.chapters = (this.info.chapters && this.info.chapters.length > 0) ?
             <Chapters list={this.info.chapters}
@@ -36,8 +40,8 @@ class Section extends React.Component {
             <React.Fragment>
 
                 <div className="one-section" onClick={this.viewChapters}>
-                    <div id="section-img-container">
-                        <img src={this.info.image} alt="tech"/>
+                    <div  id="section-img-container">
+                        <img className="shape"   src={this.info.image} alt="tech"/>
                     </div>
                     <div className="section-about-container">
                         <p className="section-title">{this.title}</p>
@@ -48,8 +52,9 @@ class Section extends React.Component {
                             <span className="section-info">Практических заданий:  {this.info.tasks}</span>
                         </div>
                     </div>
-                    <img className="button-open-close"
-                         src={this.state.view ? "/images/button_close.png" : "/images/button_add.png"} alt=""/>
+                    <div className="button-open-close">
+                        <img src={this.state.view ? "/images/button_close.png" : "/images/button_add.png"} alt=""/>
+                    </div>
                 </div>
 
                 {this.chapters}

@@ -16,6 +16,7 @@
       box-sizing: border-box;
       padding-left: 48px;
       padding-top: 27px;
+      padding-bottom: 27px;
       margin-bottom: 42px;
       background-color: $color-light-blue;
 
@@ -55,27 +56,32 @@
       text-align: left;
     }
 
-      input {
-        width: 148px;
-        height: 47px;
-        border: none;
-        color: $color-black;
-        font-family: Montserrat-Medium;
-        font-size: 15px;
-        line-height: 26px;
-        text-align: center;
-        cursor: pointer;
-      }
+    input {
+      width: 148px;
+      height: 47px;
+      border: none;
+      color: $color-black;
+      font-family: Montserrat-Medium;
+      font-size: 15px;
+      line-height: 26px;
+      text-align: center;
+      cursor: pointer;
+    }
 
-      input.selected {
-        border-bottom: 2px solid $color-blue;
-        color: $color-blue;
-      }
+    input.selected {
+      border-bottom: 2px solid $color-blue;
+      color: $color-blue;
+    }
+
+    input:hover {
+      color: $color-blue;
+    }
+
   }
 }
 
 @media screen and (max-width: 812px) {
-    .main-container .wrap-main {
+  .main-container .wrap-main {
     padding: 30px 30px 70px;
     margin: 0 auto;
   }

@@ -1,6 +1,14 @@
 @import "data/general";
 
 @font-face {
+  font-family: 'JetBrainsMono-Bold';
+  src: url('data/fonts/JetBrainsMono/JetBrainsMono-Bold.woff2') format('woff2'),
+  url('data/fonts/JetBrainsMono/JetBrainsMono-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Montserrat-Regular';
   src: url('data/fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'),
   url('data/fonts/Montserrat/Montserrat-Regular.woff') format('woff');
@@ -219,6 +227,9 @@ footer {
           text-align: left;
           padding-top: 8px;
           text-decoration: none;
+        }
+        .one-link:hover {
+          color: $color-lime;
         }
       }
 

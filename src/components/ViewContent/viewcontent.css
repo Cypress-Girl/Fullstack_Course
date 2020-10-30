@@ -10,10 +10,17 @@
 .one-section #section-img-container {
   width: 227px;
   height: auto;
+  overflow: hidden;
+  background-color: #DADCE0;
+  clip-path: circle(37.5% at 45.5% 53%);
 }
 .one-section #section-img-container img {
   width: 100%;
   height: auto;
+  position: relative;
+  top: -10px;
+  left: -25px;
+  clip-path: circle(37% at 60% 60%);
 }
 .one-section .section-about-container {
   width: 100%;
@@ -61,6 +68,15 @@
   white-space: pre;
   padding-right: 20px;
 }
+.one-section .button-open-close {
+  width: 28px;
+  height: 28px;
+}
+.one-section .button-open-close img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 599px) {
   .one-section #section-img-container {
     display: none;

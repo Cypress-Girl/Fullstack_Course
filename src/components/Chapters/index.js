@@ -7,12 +7,14 @@ class OneChapter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            view: true
+            view: true,
+            // themes: false
         }
+        this.func = this.viewThemes;
     }
 
     viewThemes = () => {
-        this.setState( state => ({
+        this.setState(state => ({
             view: !state.view
         }))
     }
@@ -25,9 +27,9 @@ class OneChapter extends React.Component {
         return (
             <React.Fragment>
 
-                <div id="chapters-wrap" onClick={() => this.viewThemes()}>
+                <div id="chapters-wrap" create={this.state.themes} onClick={this.func}>
                     <p>{this.props.chapter.title}</p>
-                    <img src="/images/arrow.png" alt="arrow"/>
+                    <img className={this.state.view ? "open" : null} src="/images/arrow.png" alt="arrow"/>
                 </div>
 
                 {(this.props.chapter.themes && this.props.chapter.themes.length > 0) ?
@@ -50,8 +52,10 @@ class Chapters extends React.Component {
     }
 
     componentDidMount() {
+        //после первого рендеринга высчитываем ывсоту контейнера и просто закрываем его
         this.rememberHeight();
-        this.setHeightAuto();
+        let container = document.getElementById(this.props.course);
+        container.style.height = "0px";
     }
 
     rememberHeight() {
@@ -59,8 +63,8 @@ class Chapters extends React.Component {
 
         let child = container.firstElementChild;
         this.h = 0;
-        while (child){
-            if (child.id === "chapters-wrap"){
+        while (child) {
+            if (child.id === "chapters-wrap") {
                 this.h += child.clientHeight;
             } else if (child.classList.contains("show")) {
                 this.h += child.clientHeight;
@@ -75,7 +79,7 @@ class Chapters extends React.Component {
         let container = document.getElementById(this.props.course);
 
         let child = container.firstElementChild;
-        while (child){
+        while (child) {
             if (child.classList.contains("show")) {
                 child.classList.remove("show");
                 child.style.height = "0px";
@@ -85,7 +89,6 @@ class Chapters extends React.Component {
     }
 
     setHeightAuto() {
-        console.log("set auto")
         //установим height="auto" для автоматичекого изменения размера контейнера
         //при изменении размера содержимого
         let container = document.getElementById(this.props.course);
@@ -99,7 +102,7 @@ class Chapters extends React.Component {
         else        //последующие отрисовки: меняем height с 0 на реальную высоту (и обратно)
         {
             viewStyle = this.props.view ? {height: this.h} : {height: 0};
-            if (!this.props.view){
+            if (!this.props.view) {
                 this.closeAllChildren();
                 this.rememberHeight();
             }
