@@ -41,7 +41,7 @@
   }
 
   #chapters-wrap:not(:last-child) {
-    box-shadow: 0 1px 1px 0 $color-light-gray;
+    border-bottom: 1px solid $color-light-gray;
   }
 
 

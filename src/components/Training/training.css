@@ -6,7 +6,8 @@
   max-width: 952px;
   height: auto;
   box-sizing: border-box;
-  padding: 60px 30px 250px 144px;
+  padding: 60px 30px 250px;
+  margin: 0 auto;
 }
 .main-container .wrap-main #skills-container {
   width: 100%;

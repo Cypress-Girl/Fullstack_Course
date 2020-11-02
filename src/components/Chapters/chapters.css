@@ -35,7 +35,7 @@
   transform: rotate(-180deg);
 }
 .chapters-container #chapters-wrap:not(:last-child) {
-  box-shadow: 0 1px 1px 0 #DADCE0;
+  border-bottom: 1px solid #DADCE0;
 }
 
 /*# sourceMappingURL=chapters.css.map */

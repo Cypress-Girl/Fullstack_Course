@@ -16,19 +16,21 @@ const Price = () => {
     return (
         <div className="price-container">
             <div id="price-wrap">
-                <p id="caption">Стоимость обучения</p>
-                <p className="price-about">Выберите удобный пакет подписки на курс или программу обучения.
-                    Вам будут доступны абсолютно все задания, уроки и события из всех курсов на время действия подписки.
-                    <br/><br/>
-                    Доступные пакеты:
-                </p>
-
-                <div id="tariff-container">
-                    <TariffButton name="Бронза" price="500"/>
-                    <TariffButton name="Серебро" price="1700"/>
-                    <TariffButton name="Золото" price="2400"/>
-                    <TariffButton name="Платина" price="4800"/>
+                <div id="price-flex">
+                    <p id="caption">Стоимость обучения</p>
+                    <p className="price-about">Выберите удобный пакет подписки на курс или программу обучения.
+                        Вам будут доступны абсолютно все задания, уроки и события из всех курсов на время действия подписки.
+                        <br/><br/>
+                        Доступные пакеты:
+                    </p>
                 </div>
+
+                    <div id="tariff-container">
+                        <TariffButton name="Бронза" price="500"/>
+                        <TariffButton name="Серебро" price="1700"/>
+                        <TariffButton name="Золото" price="2400"/>
+                        <TariffButton name="Платина" price="4800"/>
+                    </div>
             </div>
         </div>
     )
